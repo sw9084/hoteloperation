@@ -6,7 +6,7 @@ public class Reservation {
     private double price; // price each night
 
     // creat constructor
-    public Reservation(String roomType, int numberOfNights, boolean isWeekend, double price) {
+    public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
         this.roomType = roomType;
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
