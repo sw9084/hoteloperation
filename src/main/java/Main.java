@@ -15,6 +15,7 @@ public class Main {
         Employee emp1 = new Employee(111, " Bethlehem Gebremedhen", " Front Desk", 20.00, 45);
         System.out.println("\nEmployee: " + emp1.getName());
         System.out.println("Regular hours: " + emp1.getRegularHoursWorked());
+        System.out.println("Overtime hours: " + emp1.getOvertimeHoursWorked());
         System.out.println("Total pay: $" + emp1.getTotalPay());
      }
 

@@ -31,11 +31,11 @@ public class Employee {
     }
     // derived getter: calculates regular hours
     public double getRegularHoursWorked() {
-        return Math.min(hoursWorked,40);
+        return Math.min(hoursWorked,50);
     }
     // derived getter overtime hours
     public double getOvertimeHoursWorked() {
-        return Math.min(hoursWorked - 40, 0);
+        return Math.min(hoursWorked - 40, 20);
     }
     // derived getter total pay
     public double getTotalPay() {

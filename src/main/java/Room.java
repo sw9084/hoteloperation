@@ -10,15 +10,18 @@ public class Room {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
         this.isOccupied = isOccupied;
-        this. isDirty = isDirty;
+        this.isDirty = isDirty;
     }
+
     // getter methods that allows other classes to ask for the info
     public int getNumberOfBeds() {
         return numberOfBeds;
     }
+
     public double getPrice() {
         return price;
     }
+
     public boolean isOccupied() {
         return isOccupied;
     }
@@ -27,9 +30,49 @@ public class Room {
         return isDirty;
     }
 
-        // Derived getter - calculated it based of the two variable
-        public boolean isAvailable() {
-            return !isOccupied && !isDirty; // the room is available if not occupied and not dirty
+    // Derived getter - calculated it based of the two variable
+    public boolean isAvailable() {
+        return !isOccupied && !isDirty; // the room is available if not occupied and not dirty
+    }
+
+    // add new methode
+    public boolean checkIn() {
+        if (this.isAvailable()) {
+            this.isOccupied = true;
+            this.isDirty = true;
+            return true;
+        }
+
+        // otherwise
+        else {
+            return false;
+
+        }
+
+    }
+
+    public boolean checkout() {
+        if (this.isOccupied) {
+            this.isDirty = true;
+            this.isOccupied = false;
+            return true;
+        } else {
+            return false;
         }
     }
+
+    public boolean cleanRoom() {
+        if (this.isDirty) {
+            this.isDirty = false;
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+
+
+
+
 

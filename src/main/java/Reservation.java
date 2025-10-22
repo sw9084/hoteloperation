@@ -19,6 +19,10 @@ public class Reservation {
         } else {
             price = 0;
         }
+        // if it is weekend, increase price by 10%
+        if (isWeekend) {
+            price = price * 1.10;
+        }
     }
     // getter and setter
     public String getRoomType() {
